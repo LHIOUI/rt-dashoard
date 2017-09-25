@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class AuthService {
-  private _isLoggedIn = true;
+  private _isLoggedIn = false;
   uid = '';
   constructor() {}
   public get isLoggedIn() {
