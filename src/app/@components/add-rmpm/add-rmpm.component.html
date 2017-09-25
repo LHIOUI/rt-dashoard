@@ -1,0 +1,31 @@
+<title>@Rt - Add RMPM</title>
+<section id="left-column" class="content_column bg_candidate">
+
+</section>
+
+<section id="right-column" class="content_column bg_candidate">
+  <div class="content">
+    <div class="form">
+      <form id="form_add_rt" class="form-vertical" role="form" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+        <h2>Enter RMPM Codes</h2>
+        <h3>You can find them in the credit proposal</h3>
+        <div *ngFor="let code of codes">
+          <div class="form-group">
+            <input class="form-control" placeholder="Enter your RMPM code" [name]="'rmpm'+code.id" type="text" ngModel required>
+            <i class="material-icons" (click)="remove(code)" style="position: absolute;right: 10px;top: 50%;transform: translateY(-50%);cursor: pointer;">highlight_off</i>
+          </div>
+        </div>
+
+
+
+        <div class="text-right">
+          <a class="link-rt" href="#" (click)="addCode($event)">+ add RMPM code</a>
+        </div>
+
+        <div class="form-group container-btn">
+          <button class="btn btn-success login-btn">Enter @RT</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

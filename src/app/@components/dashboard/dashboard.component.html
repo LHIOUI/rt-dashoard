@@ -1,0 +1,349 @@
+<title>@Rt - Dashboard</title>
+<div class="dashboard">
+  <div class="header">
+    <div class="container-fluid header-container">
+      <ul class="nav nav-pills pull-right">
+        <li class="active">
+          <a href="#">
+                  <img src="assets/img/user.png" alt="">
+                  Laura Johnston
+                </a>
+        </li>
+        <li>
+          <a href="#" (click)="onSettings($event)">
+            <i class="material-icons" style="float: left;margin-right: 5px;cursor:pointer;">brightness_low</i>
+                  Settings
+                </a>
+        </li>
+
+      </ul>
+      <img src="assets/img/Logo.png" alt="logo">
+    </div>
+  </div>
+  <div class="container-fluid container-padding">
+    <div class="business-info">
+      <h4>BUSINESS GROUP NAME</h4>
+
+
+      <table class="business-detail">
+        <thead>
+          <th>ID RMPM</th>
+          <th>INDUSTRY CODE</th>
+          <th>WL INDICATOR</th>
+          <th>RATING</th>
+          <th>TGA/SAF</th>
+        </thead>
+        <tr>
+          <td>36TTRFD</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <rt-tabbar>
+    <rt-tabbar-item text="Business group" [isActive]="true"></rt-tabbar-item>
+    <rt-tabbar-item text="Borrower 1"></rt-tabbar-item>
+    <rt-tabbar-item text="orrower 2"></rt-tabbar-item>
+  </rt-tabbar>
+
+
+  <div class="container-fluid container-padding">
+    <div class="clearfix section-container">
+      <div class="col-sm-4">
+        <div class="stat-box">
+          <div class="box-title">
+            RISK EXPOSURE
+          </div>
+
+          <div class="box-body">
+            <chart [options]="options"></chart>
+          </div>
+        </div>
+
+        <a href="" class="pull-right small-btn">
+                  Access to GV
+                </a>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="stat-box">
+          <div class="box-title">
+            FINANCIAL STATEMENTE
+          </div>
+
+          <div class="box-body">
+            <table class="table-stat">
+              <thead>
+                <th></th>
+                <th>2014</th>
+                <th>2015</th>
+                <th>2016</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Equity</th>
+                  <td>35%</td>
+                  <td>32%</td>
+                  <td>10%</td>
+                </tr>
+
+                <tr>
+                  <th>ECR</th>
+                  <td>6</td>
+                  <td>3.5</td>
+                  <td>3</td>
+                </tr>
+
+                <tr>
+                  <th>DSCR</th>
+                  <td>1</td>
+                  <td>1.2</td>
+                  <td>1.1</td>
+                </tr>
+              </tbody>
+
+            </table>
+          </div>
+        </div>
+
+        <a href="" class="pull-right small-btn">
+                  Access to GV
+                </a>
+      </div>
+      <div class="col-sm-4">
+        <div class="stat-box">
+          <div class="box-title">
+            MARKET DATA
+          </div>
+
+          <div class="box-body">
+            <chart [options]="marketDataOptions"></chart>
+          </div>
+        </div>
+
+        <a href="" class="pull-right small-btn">
+                  Access to GV
+                </a>
+      </div>
+    </div>
+
+    <div class="clearfix section-container">
+      <div class="col-sm-3">
+        <div class="menu-box">
+          <div class="menu-box-title">USEFUL DOCUMENT</div>
+          <ul class="nav nav-pills nav-stacked">
+            <li class="menu-box-item">Last CC Minutes</li>
+            <li class="menu-box-item">Last CC Minutes</li>
+            <li class="menu-box-item">Last CC Minutes</li>
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="col-sm-9">
+        <div class="stat-box">
+          <div class="box-title">
+            News
+          </div>
+          <div class="box-body">
+            <div class="news-row clearfix">
+              <div class="col-sm-3">
+                <img src="assets/img/newsimg.png" alt="">
+              </div>
+
+              <div class="col-sm-7">
+                <div class="news-source">Source : Leonard</div>
+                <div class="news-title">Title news</div>
+                <div class="news-body">Apes are herbivores for the most part, but they also may eat small animals or bugs to supplement their diet.
+                </div>
+              </div>
+
+              <div class="col-sm-2 news-date">yesterday</div>
+            </div>
+
+            <div class="news-row clearfix">
+              <div class="col-sm-3">
+                <img src="assets/img/newsimg.png" alt="">
+              </div>
+
+              <div class="col-sm-7">
+                <div class="news-source">Source : Leonard</div>
+                <div class="news-title">Title news</div>
+                <div class="news-body">Apes are herbivores for the most part, but they also may eat small animals or bugs to supplement their diet.
+                </div>
+              </div>
+
+              <div class="col-sm-2 news-date">yesterday</div>
+            </div>
+
+            <div class="news-row clearfix">
+              <div class="col-sm-3">
+                <img src="assets/img/newsimg.png" alt="">
+              </div>
+
+              <div class="col-sm-7">
+                <div class="news-source">Source : Leonard</div>
+                <div class="news-title">Title news</div>
+                <div class="news-body">Apes are herbivores for the most part, but they also may eat small animals or bugs to supplement their diet.
+                </div>
+              </div>
+
+              <div class="col-sm-2 news-date">yesterday</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="clearfix section-container">
+      <div class="col-sm-3">
+        <div class="menu-box">
+          <div class="menu-box-title">USEFUL DOCUMENT</div>
+          <ul class="nav nav-pills nav-stacked">
+            <li class="menu-box-item">EIS</li>
+            <li class="menu-box-item">EIS</li>
+            <li class="menu-box-item">EISs</li>
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="col-sm-9">
+        <div class="stat-box">
+          <div class="box-title">
+            News
+          </div>
+          <div class="box-body">
+            <div class="news-row clearfix">
+              <div class="col-sm-3">
+                <img src="assets/img/newsimg.png" alt="">
+              </div>
+
+              <div class="col-sm-7">
+                <div class="news-source">Source : Leonard</div>
+                <div class="news-title">Title news</div>
+                <div class="news-body">Apes are herbivores for the most part, but they also may eat small animals or bugs to supplement their diet.
+                </div>
+              </div>
+
+              <div class="col-sm-2 news-date">yesterday</div>
+            </div>
+
+            <div class="news-row clearfix">
+              <div class="col-sm-3">
+                <img src="assets/img/newsimg.png" alt="">
+              </div>
+
+              <div class="col-sm-7">
+                <div class="news-source">Source : Leonard</div>
+                <div class="news-title">Title news</div>
+                <div class="news-body">Apes are herbivores for the most part, but they also may eat small animals or bugs to supplement their diet.
+                </div>
+              </div>
+
+              <div class="col-sm-2 news-date">yesterday</div>
+            </div>
+
+            <div class="news-row clearfix">
+              <div class="col-sm-3">
+                <img src="assets/img/newsimg.png" alt="">
+              </div>
+
+              <div class="col-sm-7">
+                <div class="news-source">Source : Leonard</div>
+                <div class="news-title">Title news</div>
+                <div class="news-body">Apes are herbivores for the most part, but they also may eat small animals or bugs to supplement their diet.
+                </div>
+              </div>
+
+              <div class="col-sm-2 news-date">yesterday</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix section-container">
+      <div class="col-sm-3">
+        <div class="menu-box">
+          <div class="menu-box-title">USEFUL DOCUMENT</div>
+          <ul class="nav nav-pills nav-stacked">
+            <li class="menu-box-item">EIS</li>
+            <li class="menu-box-item">EIS</li>
+            <li class="menu-box-item">EISs</li>
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="col-sm-9">
+        <div class="col-sm-6">
+          <div class="stat-box">
+            <div class="box-title">
+              COUNTRY ENVELOP
+            </div>
+            <div class="box-body">
+              <div class="pie-container">
+                <round-progress [current]="3780000" [max]="14000000" [color]="'#FE1200'" [background]="'#eaeaea'" [radius]="125" [stroke]="20"
+                  [rounded]="true" [clockwise]="true" [responsive]="responsive" [duration]="800" [animation]="'easeInOutQuart'"
+                  [animationDelay]="0"></round-progress>
+                <div class="pie-label">
+                  <div class="pie-label-percent">
+                    {{(3780000 * 100 / 14000000).toFixed(0)}}%
+                  </div>
+                  <div class="pie-label-text">Complete</div>
+                </div>
+              </div>
+
+              <div class="stat-info">
+                Initial amount : <span class="info-value">14 000 000</span>
+              </div>
+
+              <div class="stat-info">
+                Remaining amout : <span class="info-value">3 780 000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="stat-box">
+            <div class="box-title">
+              SECTOR LIMIT
+            </div>
+            <div class="box-body">
+              <div class="pie-container">
+                <round-progress [current]="10500000" [max]="14000000" [color]="'#0DA75B'" [background]="'#eaeaea'" [radius]="125" [stroke]="20"
+                  [rounded]="true" [clockwise]="true" [responsive]="true" [duration]="800" [animation]="'easeInOutQuart'" [animationDelay]="0"></round-progress>
+                <div class="pie-label">
+                  <div class="pie-label-percent">
+                    {{(10500000 * 100 / 14000000).toFixed(0)}}%
+                  </div>
+                  <div class="pie-label-text">Complete</div>
+                </div>
+              </div>
+
+              <div class="stat-info">
+                Initial amount : <span class="info-value">14 000 000</span>
+              </div>
+
+              <div class="stat-info">
+                Remaining amout : <span class="info-value">10 500 000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

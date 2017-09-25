@@ -1,0 +1,42 @@
+<title>@Rt - Sign in</title>
+<section id="left-column" class="content_column bg_candidate">
+
+</section>
+
+<section id="right-column" class="content_column bg_candidate">
+  <div class="content">
+    <div class="form">
+      <form id="form_connexion" class="form-vertical" role="form" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+        <h2>Welcome to @Rt</h2>
+        <h3>Login in to acces your account</h3>
+        <div class="form-group">
+          <div class="">
+            <input class="form-control" placeholder="Enter your IUD" name="uid" id="uid" type="text" ngModel required #uid="ngModel">
+            <span class="help-block help-field" [ngClass]="{'hide':uid.valid}">Ce champs n'est pas valide</span><span>
+                <i class="fa fa-times-circle icon-check icon-wrong" [ngClass]="{'hide':uid.valid}"></i> 
+                <i class="fa fa-check-circle icon-check icon-right " [ngClass]="{'hide':!uid.valid}"></i> 
+            </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="">
+            <input class="form-control" placeholder="Enter your password" type="password" name="psw" id="psw" ngModel required #password="ngModel">
+            <span class="help-block help-field" [ngClass]="{'hide':password.valid}">Ce champs n'est pas valide</span>
+            <span>
+                <i class="fa fa-times-circle icon-check icon-wrong" [ngClass]="{'hide':password.valid}"></i> 
+                <i class="fa fa-check-circle icon-check icon-right" [ngClass]="{'hide':!password.valid}"></i> 
+            </span>
+          </div>
+        </div>
+
+        <div class="text-right">
+          <a class="link-rt" href="#">Forgot password?</a>
+        </div>
+
+        <div class="form-group container-btn">
+          <button class="btn btn-success login-btn">Sign in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
