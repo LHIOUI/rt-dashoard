@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
 export class AuthService {
   private _isLoggedIn = false;
   uid = '';
-  constructor() {}
+  constructor() {
+    this._isLoggedIn = window.localStorage['__loggedIn'] === 'true';
+  }
   public get isLoggedIn() {
     return this._isLoggedIn;
   }
@@ -12,9 +14,11 @@ export class AuthService {
     this.uid = uid;
     console.log(uid);
     this._isLoggedIn = true;
+    window.localStorage['__loggedIn'] = 'true';
   }
   public logout() {
     this._isLoggedIn = false;
+    window.localStorage['__loggedIn'] = 'false';
     this.uid = '';
   }
 }

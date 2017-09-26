@@ -36,11 +36,17 @@ import { RoundProgressModule } from 'angular-svg-round-progressbar';
           `,
 })
 export class RoundedGaugeChart {
+  //filled color of gauge
   @Input() filledColor: string = '#FE1200';
+  //gauge background color
   @Input() backgroundColor: string = '#eaeaea';
+  //gauge current value
   @Input() currentValue: number = 10;
+  //gauge max value
   @Input() maxValue: number = 100;
+  //gauge text label
   @Input() gaugeLabel: string = 'Complete';
+  //gauge title label
   @Input() chartTitle: string = '';
 }
 
