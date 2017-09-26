@@ -286,63 +286,8 @@
       </div>
 
       <div class="col-sm-9">
-        <div class="col-sm-6">
-          <div class="stat-box">
-            <div class="box-title">
-              COUNTRY ENVELOP
-            </div>
-            <div class="box-body">
-              <div class="pie-container">
-                <round-progress [current]="3780000" [max]="14000000" [color]="'#FE1200'" [background]="'#eaeaea'" [radius]="125" [stroke]="20"
-                  [rounded]="true" [clockwise]="true" [responsive]="responsive" [duration]="800" [animation]="'easeInOutQuart'"
-                  [animationDelay]="0"></round-progress>
-                <div class="pie-label">
-                  <div class="pie-label-percent">
-                    {{(3780000 * 100 / 14000000).toFixed(0)}}%
-                  </div>
-                  <div class="pie-label-text">Complete</div>
-                </div>
-              </div>
-
-              <div class="stat-info">
-                Initial amount : <span class="info-value">14 000 000</span>
-              </div>
-
-              <div class="stat-info">
-                Remaining amout : <span class="info-value">3 780 000</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="stat-box">
-            <div class="box-title">
-              SECTOR LIMIT
-            </div>
-            <div class="box-body">
-              <div class="pie-container">
-                <round-progress [current]="10500000" [max]="14000000" [color]="'#0DA75B'" [background]="'#eaeaea'" [radius]="125" [stroke]="20"
-                  [rounded]="true" [clockwise]="true" [responsive]="true" [duration]="800" [animation]="'easeInOutQuart'" [animationDelay]="0"></round-progress>
-                <div class="pie-label">
-                  <div class="pie-label-percent">
-                    {{(10500000 * 100 / 14000000).toFixed(0)}}%
-                  </div>
-                  <div class="pie-label-text">Complete</div>
-                </div>
-              </div>
-
-              <div class="stat-info">
-                Initial amount : <span class="info-value">14 000 000</span>
-              </div>
-
-              <div class="stat-info">
-                Remaining amout : <span class="info-value">10 500 000</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <rt-gauge-chart chartTitle="COUNTRY ENVELOP" currentValue="3780000" maxValue="14000000"></rt-gauge-chart>
+        <rt-gauge-chart chartTitle="SECTOR LIMIT" currentValue="10500000" maxValue="14000000" filledColor="#0DA75B"></rt-gauge-chart>
       </div>
     </div>
   </div>

@@ -7,6 +7,7 @@ import { RtTabBarModule } from './@ui-elements';
 import { AppComponent } from './app.component';
 import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
+import { RoundedGaugeChartModule } from './@ui-elements';
 import * as highcharts from 'highcharts';
 import * as highchartsMore from 'highcharts/js/highcharts-more';
 import * as brokenAxis from 'highcharts/js/modules/broken-axis';
@@ -45,6 +46,7 @@ import { AddRmpmComponent } from './@components/add-rmpm/add-rmpm.component';
     RoundProgressModule,
     ReactiveFormsModule,
     FormsModule,
+    RoundedGaugeChartModule,
   ],
   providers: [
     AuthService,
